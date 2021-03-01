@@ -1,0 +1,6 @@
+org\ricardo\compilador\Sinalizadores.class
+org\ricardo\compilador\Main.class
+org\ricardo\compilador\Arquivo.class
+org\ricardo\compilador\Sinalizador.class
+org\ricardo\compilador\Tokens.class
+org\ricardo\compilador\Token.class
