@@ -22,14 +22,15 @@ public class Sintatico {
         this.filaTk = new LinkedList<>(listOfTokens); //inicia a fila
         this.pilha = new Stack<>();// inicia a pilha
         pilha.push("$"); // add $ e seraos para no final mostrar que o processo deu certo
-        pilha.push("init_program");
+        pilha.push("seraos");
     }
 
     public void analiseSintatico() { // verifica o que esta no topo
 
-        while (!pilha.empty()) {
-            var tkTemp = filaTk.getFirst().getToken();
-            var tk = Token.isKeyword(tkTemp) ? Token.palavrasChave.get(tkTemp):tkTemp;
+        while (!pilha.isEmpty()) {
+            //var tkTemp = filaTk.getFirst().getToken();
+          //  var tk = Token.isKeyword(tkTemp) ? Token.palavrasChave.get(tkTemp):tkTemp;
+            var tk = filaTk.getFirst().getToken();
             var line = filaTk.getFirst().getLine();
             var column = filaTk.getFirst().getColum();
 
@@ -88,7 +89,7 @@ public class Sintatico {
     }
 
     private boolean isTerminal(String s) {
-        return terminal.containsKey(s) || naoTerminal.containsKey(s);
+        return terminal.containsKey(s);
         //return s.chars().allMatch(Character::isLowerCase) || Token.isSymbol(s) || s.equals("$");
     }
 

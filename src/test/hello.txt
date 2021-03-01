@@ -1,3 +1,4 @@
 start!
-print! "hello" ;
+loop! num=3
+endloop!
 end!
