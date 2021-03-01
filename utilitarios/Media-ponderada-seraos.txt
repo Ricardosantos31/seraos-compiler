@@ -1,0 +1,35 @@
+start!
+
+	var! numNota;
+	var! media;
+	var! somaNota;
+	var! nota;
+	var! aux;
+
+	print! "insira a quantidade de notas :";
+	scan! numNota;
+	aux = numNota;
+	
+	loop! aux > 0
+
+		print! "insira uma nota";
+		scan! nota;
+		
+		somaNota = somaNota + nota;
+		aux = aux -1;
+
+	endloop!
+
+	media = somaNota / numNota;
+	
+	if! media < 6
+		print! "reprovado";
+	else!
+		print! "aprovado";
+	endif! 
+
+	print! "media..";
+	print! media;
+	
+	
+end!

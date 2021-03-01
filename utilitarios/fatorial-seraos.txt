@@ -1,0 +1,20 @@
+start!
+
+   	var! num;
+	var! fat;
+	var! result;
+
+	result = 1;
+	print! "escreva um numero";
+	scan! num;
+	
+	loop! fat<num
+
+		fat=fat+1;
+		result=result*fat;	
+
+	endloop!
+
+	print! result;
+
+end!

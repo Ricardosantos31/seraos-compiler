@@ -1,0 +1,28 @@
+start!
+
+var! aB;
+var! bA;
+aB = bA;
+
+scan! aB;
+
+print! "bA";
+print! bA;
+
+if! aB < bA
+
+else!
+	if! aB > bA
+	else!
+		if! aB > bA
+		endif!
+	endif!
+endif!
+
+
+
+loop! bA > aB 
+
+endloop!
+
+end!
