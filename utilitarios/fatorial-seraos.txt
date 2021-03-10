@@ -9,12 +9,12 @@ start!
 	scan! num;
 	
 	loop! fat<num
-
+        fat = fat/0;
 		fat=fat+1;
-		result=result*fat;	
+		result=result*fat;
 
 	endloop!
 
-	print! result;
+	print! "result";
 
 end!

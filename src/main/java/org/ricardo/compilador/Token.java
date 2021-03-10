@@ -130,7 +130,7 @@ public class Token {
                     } while (!line.get(++i).equals("\""));
 
                     string.append('"');
-                    ListofTokens.add(new Tokens("string", string.toString(), lineCount, colunCount));
+                    ListofTokens.add(new Tokens("string_literal", string.toString(), lineCount, colunCount));
                     colunCount += string.length();
                 } else {
                     System.err.println("LEXICAL ERROR at [" + lineCount + ", " + colunCount + "] " +
@@ -142,7 +142,7 @@ public class Token {
             lineCount++;
         }
         ListofTokens.add(new Tokens("$", "$", lineCount, colunCount));
-        if (Sinalizador.TOKEM.getStatus()) {
+        if (Sinalizador.TOKEM.getStatus() || Sinalizador.TODOS.getStatus()) {
             for (Tokens listofTokens : ListofTokens) {
                 System.out.println(listofTokens.toString());
             }

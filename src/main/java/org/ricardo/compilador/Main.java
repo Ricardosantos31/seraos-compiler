@@ -1,5 +1,6 @@
 package org.ricardo.compilador;
 
+import org.ricardo.semantico.Semantico;
 import org.ricardo.sintatico.Sintatico;
 
 public class Main {
@@ -14,6 +15,8 @@ public class Main {
         var listaDeTokens = token.tk(conteudoDoArquivo);
         System.out.println("Analise léxica concluida");
         new Sintatico(listaDeTokens).analiseSintatico();
+        System.out.println("Analise sinattico concluida");
+        new Semantico(listaDeTokens).analisador();
     }
 }
 

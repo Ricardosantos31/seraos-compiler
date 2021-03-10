@@ -9,6 +9,8 @@ public class Sinalizadores {
             switch (s) {
                 case "--tk" -> Sinalizador.TOKEM.setStatus(true);
                 case "--sin" -> Sinalizador.SINTATICO.setStatus(true);
+                case "--all" -> Sinalizador.TODOS.setStatus(true);
+                case "--sem" ->Sinalizador.SEMANTICO.setStatus(true);
             }
         }
     }

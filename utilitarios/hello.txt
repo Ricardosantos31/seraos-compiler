@@ -1,4 +1,7 @@
 start!
-loop! num=3
+var! num;
+var! bytes;
+
+loop! num < bytes
 endloop!
 end!

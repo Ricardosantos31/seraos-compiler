@@ -4,7 +4,9 @@ public enum Sinalizador {
 
 
     TOKEM("--tk", false),
-    SINTATICO("--sin",false);
+    SINTATICO("--sin",false),
+    TODOS("--all",false),
+    SEMANTICO("--sem",false);
 
 
     private String value;
